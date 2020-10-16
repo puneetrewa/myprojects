@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='style/mystyle.css')}}">
+	</head>
+    <body>
+        <div class="login">
+		   <h1 align="center">Credit Card Default Predictor</h1>
+       
+           <form action="/predict" method="POST" class="col">
+			<div class="con"> 
+			<hr>
+			   <label for="lim-bal"><b>Limit Balance</b></label>   
+			   <input type="text" name="lim-bal" placeholder="Enter here (In Rupees)" id="lim-bal" required="required" >
+			     
+			   <label for="edu"><b>Education</b></label>
+			   <input type="text" name="edu" placeholder="Enter 1-Intermediate, 2-Graduated, 3-Post-graduated" id="edu" required="required" />
+			   
+			   <label for="mar"><b>Marital Status</b></label>
+			   <input type="text" name="mar" placeholder="Enter 1-Married, 2-Unmarried" id="mar" required="required" />
+			   
+			   <label for="age"><b>Age</b></label>
+			   <input type="text" name="age" placeholder="Enter your age (In Years)" id="age" required="required" />
+			   
+			   <label for="pay-1"><b>Pay 1</b></label>
+			   <input type="text" name="pay-1" placeholder="Enter Pay-1 (In Rupees)" id="pay-1" required="required" />
+
+			   <label for="billamt-1"><b>Bill Amount 1</b></label>
+			   <input type="text" name="billamt-1" placeholder="Enter Bill Amount 1 (In Rupees)" id="billamt-1" required="required" />
+			   
+			   <label for="billamt-2"><b>Bill Amount 2</b></label>
+			   <input type="text" name="billamt-2" placeholder="Enter Bill Amount 2 (In Rupees)" id="billamt-2" required="required" />
+			   
+			   <label for="billamt-3"><b>Bill Amount 3</b></label>
+			   <input type="text" name="billamt-3" placeholder="Enter Bill Amount 3 (In Rupees)" id="billamt-3" required="required" />
+			   
+			   <label for="billamt-4"><b>Bill Amount 4</b></label>
+			   <input type="text" name="billamt-4" placeholder="Enter Bill Amount 4 (In Rupees)" id="billamt-4" required="required" />
+			   
+			   <label for="billamt-5"><b>Bill Amount 5</b></label>
+			   <input type="text" name="billamt-5" placeholder="Enter Bill Amount 5 (In Rupees)" id="billamt-5" required="required" />
+			   
+			   <label for="billamt-6"><b>Bill Amount 6</b></label>
+			   <input type="text" name="billamt-6" placeholder="Enter Bill Amount 6 (In Rupees)" id="billamt-6" required="required" />
+			   
+			   <label for="payamt-1"><b>Pay Amount 1</b></label>
+			   <input type="text" name="payamt-1" placeholder="Enter Pay Amount 1 (In Rupees)" id="payamt-1" required="required" />
+			   
+			   <label for="payamt-2"><b>Pay Amount 2</b></label>
+			   <input type="text" name="payamt-2" placeholder="Enter Pay Amount 2 (In Rupees)" id="payamt-2" required="required" />
+			   
+			   <label for="payamt-3"><b>Pay Amount 3</b></label>
+			   <input type="text" name="payamt-3" placeholder="Enter Pay Amount 3 (In Rupees)" id="payamt-3" required="required" />
+			   
+			   <label for="payamt-4"><b>Pay Amount 4</b></label>
+			   <input type="text" name="payamt-4" placeholder="Enter Pay Amount 4 (In Rupees)" id="payamt-4" required="required" />
+			   
+			   <label for="payamt-5"><b>Pay Amount 5</b></label>
+			   <input type="text" name="payamt-5" placeholder="Enter Pay Amount 5 (In Rupees)" id="payamt-5" required="required" />
+			   
+			   <label for="payamt-6"><b>Pay Amount 6</b></label>
+			   <input type="text" name="payamt-6" placeholder="Enter Pay Amount 6 (In Rupees)" id="payamt-6" required="required" />
+			   
+			   <button type="submit" class="btn">Predict</button>
+			   <hr>
+			
+		   </form>
+		   <br>
+		   <br>
+		   <h2 align="center">{{ prediction_text }}</h2>
+		   
+		</body>
+</html>	
+		
+		  
